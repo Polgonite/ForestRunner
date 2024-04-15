@@ -215,7 +215,6 @@ def main():
                     a = 3
                 player.sprite = player.slide[a]
             elif player.isSliding:
-                print(a)
                 if a > 7:
                     a = 0
                     player.sprite = player.right[a]
@@ -313,13 +312,11 @@ def main():
                         highscore = score
             
             if obstacle_timer > difficulty_limit:
-                print(obstacle_timer)
                 spawn_obstacles()
                 obstacle_timer = 0
             
             if score % 1000 == 0:
                 difficulty_limit += -1
-                print(difficulty_limit)
 
         redrawGameWindow()
 
